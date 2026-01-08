@@ -1,0 +1,8 @@
+tirex-tracker
+transformers[torch,sentencepiece]
+datasets
+evaluate
+seqeval
+protobuf
+seaborn
+pandas
