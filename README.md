@@ -74,3 +74,24 @@ import pandas as pd
 df = pd.read_json("./dataset/<task>/<split>.jsonl", lines=True)
 ```
 from inside the repo root, where `<task>` is one of the supported tasks: `"causality detection"`, `"causal candidate extraction"`, and `"causality identification"`, and `<split>` is one of `train` or `dev`.
+
+
+# Citation
+If you found our dataset useful, we would greately appreciate you citing our paper:
+```bib
+@article{hagen2026,
+  author       = {Tim Hagen and
+                  Niklas Deckers and
+                  Felix Wolter and
+                  Harrisen Scells and
+                  Martin Potthast},
+  title        = {Investigating Counterclaims in Causality Extraction from Text},
+  journal      = {CoRR},
+  volume       = {abs/2510.08224},
+  year         = {2026},
+  url          = {https://doi.org/10.48550/arXiv.2510.08224},
+  doi          = {10.48550/ARXIV.2510.08224},
+  eprinttype    = {arXiv},
+  eprint       = {2510.08224}
+}
+```

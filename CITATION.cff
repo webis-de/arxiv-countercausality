@@ -1,0 +1,51 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: Countercausal News Corpus
+message: >-
+  If you use this dataset, please cite it using the metadata
+  from this file.
+type: dataset
+authors:
+  - given-names: Tim
+    family-names: Hagen
+    affiliation: 'University of Kassel, Hessian.AI'
+  - given-names: Niklas
+    family-names: Deckers
+    affiliation: 'University of Kassel, Hessian.AI'
+  - given-names: Felix
+    family-names: Wolter
+  - given-names: Harrisen
+    family-names: Scells
+    affiliation: 'University of Tübingen'
+  - given-names: Martin
+    family-names: Potthast
+    affiliation: 'University of Kassel, Hessian.AI, ScaDS.AI'
+identifiers:
+  - type: doi
+    value: 10.48550/arXiv.2510.08224
+    description: Preprint
+repository-code: 'https://github.com/webis-de/arxiv-countercausality'
+abstract: >-
+  Many causal claims, such as "sugar causes hyperactivity,"
+  are disputed or outdated. Yet research on causality
+  extraction from text has almost entirely neglected
+  counterclaims of causation. To close this gap, we conduct
+  a thorough literature review of causality extraction,
+  compile an extensive inventory of linguistic realizations
+  of countercausal claims, and develop rigorous annotation
+  guidelines that explicitly incorporate countercausal
+  language. We also highlight how counterclaims of causation
+  are an integral part of causal reasoning. Based on our
+  guidelines, we construct a new dataset comprising 1028
+  causal claims, 952 counterclaims, and 1435 uncausal
+  statements, achieving substantial inter-annotator
+  agreement (Cohen's κ=0.74). In our experiments,
+  state-of-the-art models trained solely on causal claims
+  misclassify counterclaims more than 10 times as often as
+  models trained on our dataset.
+keywords:
+  - causality extraction
+  - dataset
+license: CC-BY-4.0
