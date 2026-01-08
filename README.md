@@ -1,5 +1,6 @@
 # Investigating Counterclaims in Causality Extraction from Text
 
+
 <p align="center" id="abstract">
 	<b>Abstract</b>
 </p>
@@ -19,26 +20,29 @@ You can finde the dataset in `dataset`. Each subfolder corresponds to one of the
 ## Format
 ### Causality detection
 Each line of the file contains a JSON object which has the following fields:
+- `index`: A unique identifier for the entry.
 - `label`: An integer that is `0` if the text is uncausal and `1` otherwise.
 - `text`: A string that should be classified.
 
 **Example:**
 ```json
-{"label":0,"text":"The union also holds the Shahjahanpur toll plaza ."}
+{"index":"ccnc_train_10_150_2094_0","label":0,"text":"The union also holds the Shahjahanpur toll plaza ."}
 ```
 
 ### Causal candidate extraction
 Each line of the file contains a JSON object which has the following fields:
+- `index`: A unique identifier for the entry.
 - `text`: A string containing the text in which entity spans should be marked.
 - `entity`: A list of pairs of integer: the first integer marks the index in `text` at which the entity span starts and the second integer marks where it ends.
 
 **Example:**
 ```json
-{"text":"`` There were demonstrations outside , but the meeting of the PEC continued , '' he said .","entity":[[14,36],[43,75]]}
+{"index":"ccnc_train_10_161_3116_0","text":"`` There were demonstrations outside , but the meeting of the PEC continued , '' he said .","entity":[[14,36],[43,75]]}
 ```
 
 ### Causality identification
 Each line of the file contains a JSON object which has the following fields:
+- `index`: A unique identifier for the entry.
 - `text`: A string with marked entity spans (`<e1>...</e1>`, `<e2>...</e2>`, ...).
 - `relations`: A list of relationships, where each entry has the following fields:
   - `first`: A string representing the first entity as labeled in the `text` that parttakes in the relationship (`e1`, `e2`, ...).
@@ -47,7 +51,7 @@ Each line of the file contains a JSON object which has the following fields:
 
 **Example:**
 ```json
-{"text":"The company said <e1>negotiations were continuing between management and NUM officials<\/e1> with in a bid <e2>to bring an end to the strike<\/e2> .","relations":[{"first":"e2","relationship":1,"second":"e1"}]}
+{"index":"ccnc_train_10_139_1388_0","text":"The company said <e1>negotiations were continuing between management and NUM officials<\/e1> with in a bid <e2>to bring an end to the strike<\/e2> .","relations":[{"first":"e2","relationship":1,"second":"e1"}]}
 ```
 
 ## Loading the Dataset
